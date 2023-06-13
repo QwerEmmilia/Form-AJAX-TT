@@ -47,9 +47,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     file_put_contents('log.txt', $log . PHP_EOL, FILE_APPEND);
 
     $newUser = [
-        'email'=> $email,
         'id' => count($usersList) + 1,
         'name' => $name,
+        'email'=> $email,
         'password' => $password
     ];
     array_push($usersList, $newUser);
